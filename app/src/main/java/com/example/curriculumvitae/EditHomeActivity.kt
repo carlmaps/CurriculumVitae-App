@@ -20,7 +20,7 @@ class EditHomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_edit_home)
 
         val filename = intent.getStringExtra("username")
-        val spf = getSharedPreferences(filename, Context.MODE_PRIVATE)
+        spf = getSharedPreferences(filename, Context.MODE_PRIVATE)
 
         val role = spf?.getString("role", "")
         val summary = spf?.getString("summary", "")
@@ -32,7 +32,7 @@ class EditHomeActivity : AppCompatActivity() {
 
         btnSaveHome.setOnClickListener{
             val filename = intent.getStringExtra("username")
-            val spf = getSharedPreferences(filename, Context.MODE_PRIVATE)
+            spf = getSharedPreferences(filename, Context.MODE_PRIVATE)
             val spe = spf.edit()
             spe.putString("role", etJobRole.text.toString())
             spe.putString("profile", etprofile.text.toString())

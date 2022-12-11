@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/eggshell"
+    tools:context=".EditHomeActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="10dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveAbout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Edit About Page"
+                android:textColor="@color/dark_cyan"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="5dp"
+                android:text="About"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <EditText
+                android:id="@+id/etAbout"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="textMultiLine"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                android:gravity="top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAbout" />
+
+
+            <TextView
+                android:id="@+id/tvskill1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="8dp"
+                android:text="Skill1"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etAbout" />
+
+            <EditText
+                android:id="@+id/etskill1"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="textPersonName"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvskill1" />
+
+            <TextView
+                android:id="@+id/tvskillLevel1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="Skill Level"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvskill1"
+                app:layout_constraintTop_toBottomOf="@+id/etAbout"
+                app:layout_constraintVertical_bias="0.02" />
+            <!--            app:layout_constraintEnd_toLeftOf="@+id/tvskill1"-->
+
+            <EditText
+                android:id="@+id/etskillLevel1"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="number"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toEndOf="@+id/etskill1"
+                app:layout_constraintTop_toBottomOf="@+id/tvskillLevel1" />
+            <!--            app:layout_constraintEnd_toLeftOf="@+id/etskill1"-->
+
+            <TextView
+                android:id="@+id/tvskill2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="8dp"
+                android:text="Skill2"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etskill1" />
+
+            <EditText
+                android:id="@+id/etskill2"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="textPersonName"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvskill2" />
+
+            <!--            app:layout_constraintEnd_toLeftOf="@+id/tvskill2"-->
+
+            <TextView
+                android:id="@+id/tvskillLevel2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="Skill Level"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvskill2"
+                app:layout_constraintTop_toBottomOf="@+id/etskillLevel1"
+                app:layout_constraintVertical_bias="0.013" />
+
+            <EditText
+                android:id="@+id/etskillLevel2"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="number"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toEndOf="@+id/etskill2"
+                app:layout_constraintTop_toBottomOf="@+id/tvskillLevel2" />
+            <!--            app:layout_constraintEnd_toLeftOf="@+id/etskill2"-->
+
+            <TextView
+                android:id="@+id/tvskill3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="8dp"
+                android:text="Skill3"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etskill2" />
+
+            <EditText
+                android:id="@+id/etskill3"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="textPersonName"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvskill3" />
+
+            <!--            app:layout_constraintEnd_toLeftOf="@+id/tvskill3"-->
+
+            <TextView
+                android:id="@+id/tvskillLevel3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="Skill Level"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvskill3"
+                app:layout_constraintTop_toBottomOf="@+id/etskillLevel2"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <EditText
+                android:id="@+id/etskillLevel3"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="number"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toEndOf="@+id/etskill3"
+                app:layout_constraintTop_toBottomOf="@+id/tvskillLevel3" />
+            <!--            app:layout_constraintEnd_toLeftOf="@+id/etskill3"-->
+
+            <TextView
+                android:id="@+id/tvskill4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="8dp"
+                android:text="Skill4"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etskill3" />
+
+            <EditText
+                android:id="@+id/etskill4"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="textPersonName"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvskill4" />
+
+            <!--            app:layout_constraintEnd_toLeftOf="@+id/tvskill4"-->
+
+            <TextView
+                android:id="@+id/tvskillLevel4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="Skill Level"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvskill4"
+                app:layout_constraintTop_toBottomOf="@+id/etskillLevel3"
+                app:layout_constraintVertical_bias="0.021" />
+
+            <EditText
+                android:id="@+id/etskillLevel4"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="number"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toEndOf="@+id/etskill4"
+                app:layout_constraintTop_toBottomOf="@+id/tvskillLevel4" />
+            <!--            app:layout_constraintEnd_toLeftOf="@+id/etskill4"-->
+
+
+            <TextView
+                android:id="@+id/tvskill5"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="8dp"
+                android:text="Skill5"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etskill4" />
+
+            <EditText
+                android:id="@+id/etskill5"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="textPersonName"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvskill5" />
+
+
+            <!--            app:layout_constraintEnd_toLeftOf="@+id/tvskill5"-->
+
+            <TextView
+                android:id="@+id/tvskillLevel5"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="Skill Level"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvskill5"
+                app:layout_constraintTop_toBottomOf="@+id/etskillLevel4"
+                app:layout_constraintVertical_bias="0.033" />
+
+            <EditText
+                android:id="@+id/etskillLevel5"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="number"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toEndOf="@+id/etskill5"
+                app:layout_constraintTop_toBottomOf="@+id/tvskillLevel5" />
+            <!--            app:layout_constraintEnd_toLeftOf="@+id/etskill5"-->
+
+
+            <TextView
+                android:id="@+id/tvSchool1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="5dp"
+                android:text="College University Name"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etskill5" />
+
+            <EditText
+                android:id="@+id/etSchool1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="textPersonName"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSchool1" />
+
+            <TextView
+                android:id="@+id/tvSchool1Deg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="5dp"
+                android:text="College Degree"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSchool1" />
+
+            <EditText
+                android:id="@+id/etSchool1Deg"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="textPersonName"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSchool1Deg" />
+
+            <TextView
+                android:id="@+id/tvSchool2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="5dp"
+                android:text="Masters University Name"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSchool1Deg" />
+
+            <EditText
+                android:id="@+id/etSchool2"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="textPersonName"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSchool2" />
+
+            <TextView
+                android:id="@+id/tvSchool2Deg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="5dp"
+                android:text="Masters Degree"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSchool2" />
+
+            <EditText
+                android:id="@+id/etSchool2Deg"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/dark_cyan"
+                android:inputType="textPersonName"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSchool2Deg" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnSaveAbout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_background"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

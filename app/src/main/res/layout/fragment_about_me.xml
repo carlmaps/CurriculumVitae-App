@@ -155,7 +155,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical"
-                    android:text="ReactJs"
+                    android:text="Skill 4"
                     android:textStyle="bold|italic"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvSkill3"/>
@@ -180,7 +180,6 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical"
-                    android:text="SQL"
                     android:textStyle="bold|italic"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvSkill4"/>
@@ -218,7 +217,33 @@
                     app:layout_constraintTop_toBottomOf="@+id/tvEducation"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="15dp"
-                    android:src="@drawable/miu"/>
+                    android:src="@drawable/ic_baseline_person"/>
+
+                <TextView
+                    android:id="@+id/tvCollege"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:layout_width="300dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="19dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/school1"
+                    app:layout_constraintTop_toBottomOf="@+id/pb5"/>
+                <!--        app:layout_constraintTop_toRight="parent" />-->
+
+                <TextView
+                    android:id="@+id/tvCollegeDeg"
+                    android:layout_width="300dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="19dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.333"
+                    app:layout_constraintStart_toEndOf="@+id/school1"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCollege" />
 
                 <ImageView
                     android:id="@+id/school2"
@@ -228,7 +253,33 @@
                     app:layout_constraintTop_toBottomOf="@+id/school1"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="15dp"
-                    android:src="@drawable/usc"/>
+                    android:src="@drawable/ic_baseline_person"/>
+
+                <TextView
+                    android:id="@+id/tvMaster"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:layout_width="300dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="19dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/school2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCollegeDeg"/>
+                <!--        app:layout_constraintTop_toRight="parent" />-->
+
+                <TextView
+                    android:id="@+id/tvMasterDeg"
+                    android:layout_width="300dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="19dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.333"
+                    app:layout_constraintStart_toEndOf="@+id/school2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMaster" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
