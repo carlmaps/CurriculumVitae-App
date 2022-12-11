@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/eggshell"
+    tools:context=".ContactFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnEditContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/eggshell"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_mode_edit_24"
+        app:backgroundTint="@color/eggshell"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="You can reach me"
+        android:textColor="@color/turquoise"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="though the following options"
+        android:textColor="@color/dark_cyan"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageCont"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_baseline_call_24"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="makeCall"/>
+
+    <TextView
+        android:id="@+id/tvCont"
+        android:text="+1(312)927-7913"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageCont"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+<!--        app:layout_constraintTop_toRight="parent" />-->
+
+    <TextView
+        android:id="@+id/tvContType"
+        android:text="Mobile"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageCont"
+        app:layout_constraintTop_toBottomOf="@+id/tvCont" />
+<!--        app:layout_constraintTop_toRight="@+id/imageCont" />-->
+
+    <ImageView
+        android:id="@+id/imageEmail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/gmail"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageCont"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="sendMail"/>
+
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:text="cmmapada@gmail.com"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvContType" />
+<!--        app:layout_constraintTop_toRight="@+id/imageEmail" />-->
+
+    <TextView
+        android:id="@+id/tvEmailType"
+        android:text="Email"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail"/>
+<!--        app:layout_constraintTop_toRight="@+id/imageEmail" />-->
+
+    <ImageView
+        android:id="@+id/imageLinkedIn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/linkedin"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageEmail"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="openLinkedIn"/>
+
+
+    <TextView
+        android:id="@+id/tvLinkedIn"
+        android:text="https://linkedin.com/in/carlmapada"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailType" />
+<!--        app:layout_constraintTop_toRight="@+id/imageLinkedIn" />-->
+
+    <TextView
+        android:id="@+id/tvLinkedInType"
+        android:text="LinkedIn"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageLinkedIn"
+        app:layout_constraintTop_toBottomOf="@+id/tvLinkedIn" />
+<!--        app:layout_constraintTop_toRight="@+id/imageLinkedIn" />-->
+
+    <ImageView
+        android:id="@+id/imageGit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/github"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLinkedIn"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="openGithub"/>
+
+
+    <TextView
+        android:id="@+id/tvGit"
+        android:text="https://github.com/carlmaps"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageGit"
+        app:layout_constraintTop_toBottomOf="@+id/tvLinkedInType" />
+<!--        app:layout_constraintTop_toRight="@+id/imageGit" />-->
+
+    <TextView
+        android:id="@+id/tvGitType"
+        android:text="GitHub"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageGit"
+        app:layout_constraintTop_toBottomOf="@+id/tvGit" />
+<!--        app:layout_constraintTop_toRight="@+id/imageGit" />-->
+
+    <ImageView
+        android:id="@+id/imageMedium"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/medium"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageGit"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="openMedium"/>
+
+
+    <TextView
+        android:id="@+id/tvMedium"
+        android:text="https://medium.com/@cmmapada"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageMedium"
+        app:layout_constraintTop_toBottomOf="@+id/tvGitType" />
+<!--        app:layout_constraintTop_toRight="@+id/imageMedium" />-->
+
+    <TextView
+        android:id="@+id/tvMediumType"
+        android:text="Medium"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageMedium"
+        app:layout_constraintTop_toBottomOf="@+id/tvMedium" />
+<!--        app:layout_constraintTop_toRight="@+id/imageMedium" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

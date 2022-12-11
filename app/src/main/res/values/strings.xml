@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Curriculum Vitae</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in_account">Sign in to your</string>
+    <string name="register_text"><u>Register Now</u></string>
+    <string name="intro">Knowledgeable software engineer and IT project manager with more than 10 years of experience leading all phases of the development lifecycle for complex enterprise software. Hands-on expertise spanning Java and Python, Object-Oriented Programming, MS SQL and Oracle SQL, and Big Data applications. Track record of success deploying Machine Learning applications to solve major business challenges. Talent for building, managing, mentoring, and inspiring elite technical teams. </string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/btn_background.xml" value="0.1175" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/custom_progress_bar.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/edit_text_border.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/ic_baseline_apartment_24.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.1175" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/ic_baseline_lock_open.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/ic_baseline_mode_edit_24.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/ic_baseline_person.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/ic_baseline_work_24.xml" value="0.1" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/imagecircle.xml" value="0.1" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/layerone.xml" value="0.1175" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/layertwo.xml" value="0.1745" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/drawable/tab_ind.xml" value="0.2585" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout-v26/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/activity_add_work.xml" value="0.2694746376811594" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/activity_curr_vitae.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/activity_cvactivity.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/activity_cvactivity2.xml" value="0.1796875" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/activity_edit_home.xml" value="0.2694746376811594" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/activity_register.xml" value="0.2694746376811594" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/fragment_about_me.xml" value="0.22" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/fragment_contact.xml" value="0.2694746376811594" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/fragment_education.xml" value="0.2694746376811594" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/fragment_projects.xml" value="0.1" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/fragment_work.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/cmmap/Documents/COMPRO/CS473 - Mobile Device Programming/CurriculumVitae/app/src/main/res/layout/work_experience_list.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
