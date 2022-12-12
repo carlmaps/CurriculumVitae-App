@@ -4,10 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_curr_vitae.*
@@ -34,7 +33,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        setHasOptionsMenu(true)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
 
@@ -52,7 +51,10 @@ class HomeFragment : Fragment() {
         tvName.text = name
         tvCurrentRole.text = role
         tvsummary.text = summary
-        profile.setImageResource(getDrawableIntByFileName(this.activity?.baseContext,profilepic))
+
+        if(profilepic != ""){
+            profile.setImageResource(getDrawableIntByFileName(this.activity?.baseContext,profilepic))
+        }
 
         btnEditHome.setOnClickListener{
             val editHomeIntent = Intent(context, EditHomeActivity::class.java)
@@ -88,5 +90,25 @@ class HomeFragment : Fragment() {
         return 0
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.mymenu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.actionLogout -> {
+                Toast.makeText(context, "Logout option selected", Toast.LENGTH_LONG).show()
+                return true
+            }
+            R.id.actionSetting -> {
+                Toast.makeText(context, "Setting option Selected", Toast.LENGTH_LONG).show()
+                return true
+            }
+
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
 }

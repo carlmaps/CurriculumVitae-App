@@ -28,12 +28,8 @@ class FragmentAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle, bu
                 frag.arguments = bundle
                 return frag
             }
+
             3 -> {
-                val frag = ProjectsFragment()
-                frag.arguments = bundle
-                return frag
-            }
-            4 -> {
                 val frag = ContactFragment()
                 frag.arguments = bundle
                 return frag

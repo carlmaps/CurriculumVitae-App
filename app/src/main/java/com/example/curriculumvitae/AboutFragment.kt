@@ -4,10 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_edit_about.*
 import kotlinx.android.synthetic.main.fragment_about_me.*
@@ -30,24 +29,30 @@ class AboutMeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        setHasOptionsMenu(true)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_about_me, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        setHasOptionsMenu(true)
         val filename = arguments?.getString("username")
         val spf = this.activity?.getSharedPreferences(filename, Context.MODE_PRIVATE)
 
         val aboutMe = spf?.getString("about", "")
+
         val skill1 = spf?.getString("skill1", "")
         val skill1Level = spf?.getInt("skLevel1", 0)
+
         val skill2 = spf?.getString("skill2", "")
         val skill2Level = spf?.getInt("skLevel2", 0)
+
         val skill3 = spf?.getString("skill3", "")
         val skill3Level = spf?.getInt("skLevel3", 0)
+
         val skill4 = spf?.getString("skill4", "")
         val skill4Level = spf?.getInt("skLevel4", 0)
+
         val skill5 = spf?.getString("skill5", "")
         val skill5Level = spf?.getInt("skLevel5", 0)
 
@@ -60,11 +65,11 @@ class AboutMeFragment : Fragment() {
         textView3.text = aboutMe
 
         //skill1
-        tvSkill1.text = skill1
-        tvSkill2.text = skill2
-        tvSkill3.text = skill3
-        tvSkill5.text = skill4
-        tvSkill5.text = skill5
+        tvSkill1.text = if (skill1 == "")  "Skill 1" else skill1
+        tvSkill2.text = if (skill2 == "")  "Skill 2" else skill2
+        tvSkill3.text = if (skill3 == "")  "Skill 3" else skill3
+        tvSkill4.text = if (skill4 == "")  "Skill 4" else skill4
+        tvSkill5.text = if (skill5 == "")  "Skill 5" else skill5
 
         //progressbar
         if (skill1Level != null) {
@@ -133,14 +138,19 @@ class AboutMeFragment : Fragment() {
             this.activity?.baseContext
 
             val aboutMe = spf?.getString("about", "")
+
             val skill1 = spf?.getString("skill1", "")
             val skill1Level = spf?.getInt("skLevel1", 0)
+
             val skill2 = spf?.getString("skill2", "")
             val skill2Level = spf?.getInt("skLevel2", 0)
+
             val skill3 = spf?.getString("skill3", "")
             val skill3Level = spf?.getInt("skLevel3", 0)
+
             val skill4 = spf?.getString("skill4", "")
             val skill4Level = spf?.getInt("skLevel4", 0)
+
             val skill5 = spf?.getString("skill5", "")
             val skill5Level = spf?.getInt("skLevel5", 0)
 
@@ -156,7 +166,7 @@ class AboutMeFragment : Fragment() {
             tvSkill1.text = skill1
             tvSkill2.text = skill2
             tvSkill3.text = skill3
-            tvSkill5.text = skill4
+            tvSkill4.text = skill4
             tvSkill5.text = skill5
 
             //progressbar
@@ -245,5 +255,19 @@ class AboutMeFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.actionLogout -> {
+                Toast.makeText(context, "Logout option selected", Toast.LENGTH_LONG).show()
+                return true
+            }
+            R.id.actionSetting -> {
+                Toast.makeText(context, "Setting option Selected", Toast.LENGTH_LONG).show()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

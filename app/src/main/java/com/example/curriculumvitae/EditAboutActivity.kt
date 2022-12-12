@@ -23,12 +23,16 @@ class EditAboutActivity : AppCompatActivity() {
         val aboutMe = spf?.getString("about", "")
         val skill1 = spf?.getString("skill1", "")
         val skill1Level = spf?.getInt("skLevel1", 0)
+
         val skill2 = spf?.getString("skill2", "")
         val skill2Level = spf?.getInt("skLevel2", 0)
+
         val skill3 = spf?.getString("skill3", "")
         val skill3Level = spf?.getInt("skLevel3", 0)
+
         val skill4 = spf?.getString("skill4", "")
         val skill4Level = spf?.getInt("skLevel4", 0)
+
         val skill5 = spf?.getString("skill5", "")
         val skill5Level = spf?.getInt("skLevel5", 0)
 
@@ -75,7 +79,7 @@ class EditAboutActivity : AppCompatActivity() {
             spe.putString("skill1", etskill1.text.toString())
             spe.putInt("skLevel1", etskillLevel1.text.toString().toInt())
 
-            spe.putString("skill2", etskill1.text.toString())
+            spe.putString("skill2", etskill2.text.toString())
             spe.putInt("skLevel2", etskillLevel2.text.toString().toInt())
 
             spe.putString("skill3", etskill3.text.toString())

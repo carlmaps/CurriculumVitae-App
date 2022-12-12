@@ -29,7 +29,6 @@ class CurrVitaeActivity : AppCompatActivity() {
         tabLayout.addTab(tabLayout.newTab().setText("Home"))
         tabLayout.addTab(tabLayout.newTab().setText("About"))
         tabLayout.addTab(tabLayout.newTab().setText("Work"))
-        tabLayout.addTab(tabLayout.newTab().setText("Projects"))
         tabLayout.addTab(tabLayout.newTab().setText("Contacts"))
 
         val fragmentManager = supportFragmentManager
@@ -57,4 +56,6 @@ class CurrVitaeActivity : AppCompatActivity() {
         })
 
     }
+
+
 }

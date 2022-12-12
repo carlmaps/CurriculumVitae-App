@@ -62,35 +62,5 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
-//    fun initdummyData(primUser: User): User{
-//        primUser.summary = R.string.intro.toString()
-//
-//        //initialize dummy skill data
-//        var skills: ArrayList<Skills> = arrayListOf(
-//            Skills("Microsoft.NET", 10),
-//            Skills("Java", 10),
-//            Skills("SpringBoot", 5),
-//            Skills("Python", 5)
-//        )
-//
-//        //initialize dummy skill data
-//        var education: ArrayList<Education> = arrayListOf(
-//            Education("Master of Science in Computer Science","Maharishi International University", "In progress via distance education; expected completion October 2023"),
-//            Education("BS Electronics & Communications Engineering","University of San Carlos", "March 2001"),
-//        )
-//        //initialize dummy skill data
-//        var certificate: ArrayList<Certificate> = arrayListOf(
-//            Certificate("IT Service Management v2 Certification, ITIL Foundations"),
-//            Certificate("Microsoft Exam 774: Performing Cloud Data Science using Azure Machine Learning"),
-//            Certificate("Microsoft Exam 462: Administering Microsoft SQL Server 2012 / 2014 Databases"),
-//            Certificate("Microsoft Exam 461: Querying Microsoft SQL Server 2012 / 2014 Databases")
-//        )
-//
-//        var aboutInfo = AboutInfo()
-//        aboutInfo.skills = skills
-//        aboutInfo.education = education
-//        aboutInfo.certificate = certificate
-//
-//        return primUser
-//    }
+
 }

@@ -1,12 +1,15 @@
 package com.example.curriculumvitae
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_edit_contact.*
 import kotlinx.android.synthetic.main.fragment_contact.*
 
 
@@ -25,6 +28,8 @@ class ContactFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    lateinit var spf: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -37,6 +42,8 @@ class ContactFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        setHasOptionsMenu(true)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_contact, container, false)
     }
@@ -44,38 +51,111 @@ class ContactFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val filename = arguments?.getString("username")
+        val spf = this.activity?.getSharedPreferences(filename, Context.MODE_PRIVATE)
+
+        val mobile = spf?.getString("phoneNum", "")
+        val email = spf?.getString("username", "")
+        val li = spf?.getString("linkedIn", "")
+        val gh = spf?.getString("github", "")
+        val med = spf?.getString("medium", "")
+
+        tvCont.text = mobile
+        tvEmail.text = email
+        tvLinkedIn.text = li
+        tvGit.text =  gh
+        tvMedium.text= med
+
         imageCont.setOnClickListener{
-            val dialIntent = Intent(Intent.ACTION_DIAL)
-            dialIntent.data = Uri.parse("tel:" + tvCont.text.toString())
-            startActivity(dialIntent)
+           if(tvCont.text.toString() == ""){
+               Snackbar.make(it, "Phone Number is empty", Snackbar.LENGTH_LONG)
+                   .setAction("Action", null).show()
+           }
+           else {
+               val dialIntent = Intent(Intent.ACTION_DIAL)
+               dialIntent.data = Uri.parse("tel:" + tvCont.text.toString())
+               startActivity(dialIntent)
+           }
         }
 
         imageEmail.setOnClickListener{
-            val sendEmailIntent = Intent(Intent.ACTION_SEND)
-            Uri.parse("mailto:" + tvEmail.text.toString()).also { sendEmailIntent.data = it }
-            sendEmailIntent.type = "text/plain"
-            startActivity(Intent.createChooser(sendEmailIntent, "Select your Email app"))
+            if(tvEmail.text.toString() == ""){
+                Snackbar.make(it, "Email Address is empty", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+            }
+            else {
+                val sendEmailIntent = Intent(Intent.ACTION_SEND)
+                Uri.parse("mailto:" + tvEmail.text.toString()).also { sendEmailIntent.data = it }
+                sendEmailIntent.type = "text/plain"
+                startActivity(Intent.createChooser(sendEmailIntent, "Select your Email app"))
+            }
         }
 
         imageLinkedIn.setOnClickListener{
-            val url = tvLinkedIn.text.toString()
-            val uri = Uri.parse(url)
-            val i = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(i)
+
+            if(tvLinkedIn.text.toString() == ""){
+                Snackbar.make(it, "URL Address is empty", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+            }
+            else {
+                val url = tvLinkedIn.text.toString()
+                val uri = Uri.parse(url)
+                val i = Intent(Intent.ACTION_VIEW, uri)
+                startActivity(i)
+            }
         }
 
         imageGit.setOnClickListener{
-            val url = tvGit.text.toString()
-            val uri = Uri.parse(url)
-            val i = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(i)
+            if(tvGit.text.toString() == ""){
+                Snackbar.make(it, "URL Address is empty", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+            }
+            else {
+                val url = tvGit.text.toString()
+                val uri = Uri.parse(url)
+                val i = Intent(Intent.ACTION_VIEW, uri)
+                startActivity(i)
+            }
         }
 
         imageMedium.setOnClickListener{
-            val url = tvMedium.text.toString()
-            val uri = Uri.parse(url)
-            val i = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(i)
+            if(tvMedium.text.toString() == ""){
+                Snackbar.make(it, "URL Address is empty", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+            }
+            else {
+                val url = tvMedium.text.toString()
+                val uri = Uri.parse(url)
+                val i = Intent(Intent.ACTION_VIEW, uri)
+                startActivity(i)
+            }
+        }
+
+        btnEditContact.setOnClickListener{
+            val editcontactIntent = Intent(context, EditContactActivity::class.java)
+            editcontactIntent.putExtra("username", filename)
+            Snackbar.make(view, "Edit button clicked", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+            startActivityForResult(editcontactIntent, 1)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == 1) {
+            val filename = arguments?.getString("username")
+            val spf = this.activity?.getSharedPreferences(filename, Context.MODE_PRIVATE)
+
+            val mobile = spf?.getString("phoneNum", "")
+            val email = spf?.getString("username", "")
+            val li = spf?.getString("linkedIn", "")
+            val gh = spf?.getString("github", "")
+            val med = spf?.getString("medium", "")
+
+            tvCont.text = mobile
+            tvEmail.text = email
+            tvLinkedIn.text = li
+            tvGit.text =  gh
+            tvMedium.text= med
         }
     }
 
@@ -97,5 +177,19 @@ class ContactFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.actionLogout -> {
+                Toast.makeText(context, "Logout option selected", Toast.LENGTH_LONG).show()
+                return true
+            }
+            R.id.actionSetting -> {
+                Toast.makeText(context, "Setting option Selected", Toast.LENGTH_LONG).show()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
